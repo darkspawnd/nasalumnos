@@ -31,8 +31,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/alumno/nuevo', 'AlumnosController@add');
     Route::post('/alumno/crear', 'AlumnosController@create');
     
-    Route::get('/alumno/curso/{id}/agregarNota', 'AlumnosController@AgregarNota');
-    Route::post('/alumno/curso/nuevaNota', 'AlumnosController@CrearNota');
+    Route::get('/alumno/curso/{curso}/agregarNota/{alumno}', 'NotasController@Agregar');
+    Route::post('/alumno/curso/nuevaNota', 'NotasController@Create');
     
 });
 
